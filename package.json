@@ -1,0 +1,23 @@
+{
+  "name": "aliyun_ddns",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "@alicloud/pop-core": "^1.7.10",
+    "axios": "^0.21.0",
+    "node-schedule": "^1.3.2"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "guoshencheng",
+  "license": "MIT"
+}
