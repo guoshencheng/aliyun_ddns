@@ -45,11 +45,20 @@ const action = async () => {
   }
 }
 
+let j
+
 const task = ()=>{
+  action()
   // 每小时开始的时候做任务
-  schedule.scheduleJob('0 0 * * * *', ()=>{
+  j = schedule.scheduleJob('0 0 * * * *', ()=>{
     action()
   }); 
 }
 
 task()
+
+process.on('exit', () => {
+  if (j) {
+    j.cancel()
+  }
+})
